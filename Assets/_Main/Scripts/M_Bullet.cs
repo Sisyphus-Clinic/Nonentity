@@ -6,95 +6,36 @@ using UnityEngine.SceneManagement;
 public class M_Bullet : MonoBehaviour
 {
     public float moveSpeed;
-    private Rigidbody rb;
-    public LineRenderer lr;
-    private Vector3 direction;
-    public LayerMask environmentLayer;
-    private float decelerateRate;
-    public TMPro.TMP_Text t_Score;
-    private int score = 0;
-    public float turnRatio;
+    protected Rigidbody rb;
+    protected Vector3 direction;
+    protected LayerMask layer_Environment;
 
-    void Start()
+    public void Initialize_Bullet()
     {
-        rb = GetComponent<Rigidbody>();
+        //设置初始射击方向
         direction = transform.forward;
-        SetLineState(false);
-        t_Score.text = score.ToString();
+        //添加刚体组件
+        rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        rb.constraints = RigidbodyConstraints.FreezePositionY;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+        ////添加草体交互
+        //gameObject.AddComponent<ShaderInteractor>().radius = 1;
+        //设置碰撞的环境Layer
+        layer_Environment = LayerMask.NameToLayer("Environment");
     }
 
-    void FixedUpdate()
+    public void OnHitWallReflectBullet(Collision collision)
     {
-        rb.velocity = direction * moveSpeed * decelerateRate;
-        float directionInterfere = Input.GetAxisRaw("Horizontal");
-
-        if (directionInterfere != 0)
-        {
-            if (directionInterfere > 0)
-            {
-                transform.Rotate(transform.up, turnRatio);
-            
-            }
-            else
-            {
-                transform.Rotate(transform.up, -turnRatio);
-            }
-            direction = transform.forward;
-            EnterDrawBulletCurve();
-        }
-        else
-        {
-            ExitDrawCurveMode();
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.layer == 6)
+        //当与Layer为Environment的物体碰撞时，弹射自身
+        if (collision.gameObject.layer == layer_Environment)
         {
             rb.velocity = Vector3.zero;
             direction = Vector3.Reflect(direction, collision.contacts[0].normal).normalized;
             direction = new Vector3(direction.x, 0, direction.z);
             transform.forward = direction;
         }
-    }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Danger"))
-        {
-            SceneManager.LoadScene(0);
-        }
-        else
-        {
-            Destroy(other.gameObject);
-            score++;
-            t_Score.text = score.ToString();
-        }
-
-    }
-
-    private void EnterDrawBulletCurve()
-    {
-        decelerateRate = 0.1f;
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, environmentLayer))
-        {
-            SetLineState(true);
-            lr.SetPosition(0, transform.position);
-            lr.SetPosition(1, hit.point);
-        }
-    }
-
-    private void ExitDrawCurveMode()
-    {
-        decelerateRate = 1;
-        SetLineState(false);
-    }
-
-    private void SetLineState(bool targetState)
-    {
-        lr.enabled = targetState;
     }
 }
