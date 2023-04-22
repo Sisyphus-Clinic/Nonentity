@@ -21,15 +21,8 @@ public class M_B_Player : M_Bullet
 
         if (directionInterfere != 0)
         {
-            if (directionInterfere > 0)
-            {
-                transform.Rotate(transform.up, turnRatio);
-
-            }
-            else
-            {
-                transform.Rotate(transform.up, -turnRatio);
-            }
+            if (directionInterfere > 0) transform.Rotate(transform.up, turnRatio);
+            else transform.Rotate(transform.up, -turnRatio);
             direction = transform.forward;
             EnterDrawBulletCurve();
         }
