@@ -38,4 +38,9 @@ public class M_Bullet : MonoBehaviour
             transform.forward = direction;
         }
     }
+
+    protected void OnDrawGizmos()
+    {
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.red);
+    }
 }
