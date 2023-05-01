@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using MoreMountains.Feedbacks;
 
 public class M_B_Player : M_Bullet
 {
-    public LineRenderer lr;
     private float decelerateRate;
     public float turnRatio;
+    private bool isSlowMotion = false;
+    public Transform panelTranse;
+
+    public MMFeedback hitfeedback;
 
     void Start()
     {
@@ -14,10 +19,25 @@ public class M_B_Player : M_Bullet
         SetLineState(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Time.timeScale = isSlowMotion ? 1f : 0.1f;
+            isSlowMotion = !isSlowMotion;
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            panelTranse.DOScale(1, 0.4f);
+        }
+    }
+
     void FixedUpdate()
     {
         rb.velocity = direction * moveSpeed * decelerateRate;
         float directionInterfere = Input.GetAxisRaw("Horizontal");
+
+
 
         if (directionInterfere != 0)
         {
@@ -35,6 +55,7 @@ public class M_B_Player : M_Bullet
     private void OnCollisionEnter(Collision collision)
     {
         OnHitWallReflectBullet(collision);
+        //hitfeedback.FeedbackPlaying = true;
     }
 
     private void EnterDrawBulletCurve()

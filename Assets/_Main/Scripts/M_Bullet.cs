@@ -9,6 +9,7 @@ public class M_Bullet : MonoBehaviour
     protected Rigidbody rb;
     protected Vector3 direction;
     protected LayerMask layer_Environment;
+    public LineRenderer lr;
 
     public void Initialize_Bullet()
     {
@@ -21,8 +22,6 @@ public class M_Bullet : MonoBehaviour
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
         rb.constraints = RigidbodyConstraints.FreezePositionY;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
-        ////添加草体交互
-        //gameObject.AddComponent<ShaderInteractor>().radius = 1;
         //设置碰撞的环境Layer
         layer_Environment = LayerMask.NameToLayer("Environment");
     }
