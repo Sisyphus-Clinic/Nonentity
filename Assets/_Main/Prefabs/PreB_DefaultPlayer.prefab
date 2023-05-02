@@ -61,11 +61,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9359af0292640f64fbc31b09a2e06ec9, type: 3}
---- !u!4 &4029339773501523681 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3747414455411133037, guid: 9359af0292640f64fbc31b09a2e06ec9, type: 3}
-  m_PrefabInstance: {fileID: 282155279231519884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4029339773501523687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3747414455411133035, guid: 9359af0292640f64fbc31b09a2e06ec9, type: 3}
@@ -86,8 +81,7 @@ MonoBehaviour:
   moveSpeed: 10
   lr: {fileID: 5429118752099008575}
   mmf_EnvironmentHitted: {fileID: 7146449309266226067}
-  turnRatio: 1
-  panelTranse: {fileID: 4029339773501523681}
+  turnRatio: 5
 --- !u!120 &5429118752099008575 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 5238372490884844723, guid: 9359af0292640f64fbc31b09a2e06ec9, type: 3}

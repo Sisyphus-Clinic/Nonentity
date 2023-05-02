@@ -16,11 +16,6 @@ public class M_Bullet : MonoBehaviour
     protected Action EnvironmentHitted;
     public MMF_Player mmf_EnvironmentHitted;
 
-    private void Start()
-    {
-   
-    }
-
     public void Initialize_Bullet()
     {
         //设置初始射击方向
