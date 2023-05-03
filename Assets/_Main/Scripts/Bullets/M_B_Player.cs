@@ -10,7 +10,6 @@ public class M_B_Player : M_Bullet
     public float turnRatio;
     private bool isInSlowMotion = false;
     private bool isSMStartInput = false;
-    public Action ExitSlowMotion;
 
     private void Awake()
     {
@@ -19,37 +18,15 @@ public class M_B_Player : M_Bullet
 
     public void Start()
     {
-        EnvironmentHitted += mmf_EnvironmentHitted.PlayFeedbacks;
+        EnvironmentHitted += M_MMFCollection.Instance.mmf_BulletHitReflection.PlayFeedbacks;
         Initialize_Bullet();
         SetLineState(false);
-
-        FindObjectOfType<M_SlowMotion>().EnterSlowMotion += EnterSlowMotionState;
-
-        ExitSlowMotion += ExitDrawCurveMode;
-        ExitSlowMotion += () => isInSlowMotion = false;
-        ExitSlowMotion += () => isSMStartInput = false;
-        ExitSlowMotion += FindObjectOfType<M_SlowMotion>().ExitSlowMotion;
     }
 
     void FixedUpdate()
     {
         rb.velocity = direction * moveSpeed;
-
-        if (isInSlowMotion)
-        {
-            float directionInterfere = Input.GetAxisRaw("Horizontal");
-            if (directionInterfere != 0)
-            {
-                if (directionInterfere > 0) transform.Rotate(transform.up, turnRatio);
-                else transform.Rotate(transform.up, -turnRatio);
-                direction = transform.forward;
-                EnterDrawBulletCurve();
-                isSMStartInput = true;
-            }
-
-            if (isSMStartInput && directionInterfere == 0)
-                ExitSlowMotion();
-        }
+        if (isInSlowMotion) TurnBulletInSlowMotion();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -78,8 +55,33 @@ public class M_B_Player : M_Bullet
         lr.enabled = targetState;
     }
 
+    private void TurnBulletInSlowMotion()
+    {
+        float directionInterfere = Input.GetAxisRaw("Horizontal");
+        if (directionInterfere != 0)
+        {
+            if (directionInterfere > 0) transform.Rotate(transform.up, turnRatio);
+            else transform.Rotate(transform.up, -turnRatio);
+            direction = transform.forward;
+            EnterDrawBulletCurve();
+            isSMStartInput = true;
+        }
+
+        if (isSMStartInput && directionInterfere == 0)
+        {
+            M_Delegator.Instance.ExitSlowMotion();
+        }
+    }
+
     public void EnterSlowMotionState()
     {
         isInSlowMotion = true;
+    }
+
+    public void ExitSlowMotionState()
+    {
+        ExitDrawCurveMode();
+        isInSlowMotion = false;
+        isSMStartInput = false;
     }
 }

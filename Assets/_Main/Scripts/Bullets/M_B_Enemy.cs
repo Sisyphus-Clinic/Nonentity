@@ -5,11 +5,9 @@ using MoreMountains.Feedbacks;
 
 public class M_B_Enemy : M_Bullet
 {
-    public MMF_Player mmf_HitByPlayer;
-
     void Start()
     {
-        EnvironmentHitted += mmf_EnvironmentHitted.PlayFeedbacks;
+        EnvironmentHitted += M_MMFCollection.Instance.mmf_BulletHitReflection.PlayFeedbacks;
         Initialize_Bullet();
     }
 
@@ -28,7 +26,7 @@ public class M_B_Enemy : M_Bullet
             direction = Vector3.up;
             moveSpeed = 5;
             GetComponent<CapsuleCollider>().isTrigger = true;
-            mmf_HitByPlayer.PlayFeedbacks();
+            M_MMFCollection.Instance.mmf_EnemyHitByPlayer.PlayFeedbacks();
         }
     }
 

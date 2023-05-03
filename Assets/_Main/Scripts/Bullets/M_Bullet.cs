@@ -14,7 +14,6 @@ public class M_Bullet : MonoBehaviour
     public LineRenderer lr;
 
     protected Action EnvironmentHitted;
-    public MMF_Player mmf_EnvironmentHitted;
 
     public void Initialize_Bullet()
     {

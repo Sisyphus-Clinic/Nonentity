@@ -4,40 +4,26 @@ using UnityEngine;
 using MoreMountains.Feedbacks;
 using System;
 
-public class M_SlowMotion : MonoBehaviour
+public class M_SlowMotion : Singleton<M_SlowMotion>
 {
     public float slowMotionScale;
     private bool isSlowMotion = false;
-    public Action EnterSlowMotion;
-    public Action ExitSlowMotion;
-    public MMF_Player mmf_EnterSM;
-    public MMF_Player mmf_ExitSM;
-
-    private void Start()
-    {
-        EnterSlowMotion += TimeScaleEnterSlowMotion;
-        EnterSlowMotion += mmf_EnterSM.PlayFeedbacks;
-
-        ExitSlowMotion += TimeScaleExitSlowMotion;
-        ExitSlowMotion += mmf_ExitSM.PlayFeedbacks;
-    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!isSlowMotion) EnterSlowMotion();
+            if (!isSlowMotion) M_Delegator.Instance.EnterSlowMotion();
         }
     }
 
-    void TimeScaleEnterSlowMotion()
+    public void TimeScaleEnterSlowMotion()
     {
         Time.timeScale = slowMotionScale;
         isSlowMotion = true;
     }
 
-
-    void TimeScaleExitSlowMotion()
+    public void TimeScaleExitSlowMotion()
     {
         Time.timeScale = 1f;
         isSlowMotion = false;
