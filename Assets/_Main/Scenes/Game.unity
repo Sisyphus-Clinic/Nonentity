@@ -2552,6 +2552,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546451498}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &556549852
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_GrassComputeHLSL(Clone)
+  m_Shader: {fileID: 4800000, guid: 7e6d48627710b5248b5814e37b8a74ea, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _AmbientAdjustment: 0
+    - _BlendFloor: 0
+    - _Fade: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &559626332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,33 +3174,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cc5f0a8bb2955b4fae910cef89ed4ae, type: 3}
   m_PrefabInstance: {fileID: 631485024}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &651195938
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_GrassComputeHLSL(Clone)
-  m_Shader: {fileID: 4800000, guid: 7e6d48627710b5248b5814e37b8a74ea, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _AmbientAdjustment: 0
-    - _BlendFloor: 0
-    - _Fade: 0
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -6667,7 +6667,7 @@ MonoBehaviour:
   topTint: {r: 0.8018868, g: 0.62483543, b: 0.5484603, a: 1}
   bottomTint: {r: 0.38679248, g: 0.29676816, b: 0.24995552, a: 1}
   castShadow: 0
-  m_InstantiatedMaterial: {fileID: 651195938}
+  m_InstantiatedMaterial: {fileID: 556549852}
 --- !u!114 &2012597165
 MonoBehaviour:
   m_ObjectHideFlags: 0

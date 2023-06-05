@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100c39d789abada41aca669faf8d0d97, type: 3}
+  m_Name: MD_Floor
+  m_EditorClassIdentifier: 
+  modelType: 0
+  modelInfos:
+  - mesh: {fileID: -2432090755550338912, guid: 9e98e04a900642746856748d57182ae4, type: 3}
+    material: {fileID: -3033667219593020291, guid: 9e98e04a900642746856748d57182ae4, type: 3}
+    modelName: Floor 1
+    modelIndex: F1
+  - mesh: {fileID: -2432090755550338912, guid: 0e84dd88039c1674c825ce47cb5f25a8, type: 3}
+    material: {fileID: -3033667219593020291, guid: 0e84dd88039c1674c825ce47cb5f25a8, type: 3}
+    modelName: Floor 2
+    modelIndex: F2
