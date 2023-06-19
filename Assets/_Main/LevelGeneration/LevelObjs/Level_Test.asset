@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08860afb18dd6c54fb7b087a01127d5a, type: 3}
+  m_Name: Level_Test
+  m_EditorClassIdentifier: 
+  is2DLevel: 0
+  colorPalette: {fileID: 2800000, guid: 2eda35e25f94a3d4eb2e2a21e4b32313, type: 3}
+  maps:
+  - map: {fileID: 2800000, guid: ae01e2ae655e4a245bdbdb8369b4e852, type: 3}
+    layerName: Background
+  - map: {fileID: 2800000, guid: 0ca3a22344c487d43a0499ce00d5d85e, type: 3}
+    layerName: Default
+  - map: {fileID: 2800000, guid: 40959f4caf169404db82ad0143d2f8c3, type: 3}
+    layerName: Default
+  colorArray_2D:
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    colorObjs:
+    - sprite: {fileID: 21300000, guid: 858d21f9dc2637d488b74a7126c51fbf, type: 3}
+      proportion: 0
+  - color: {r: 1, g: 1, b: 1, a: 1}
+    colorObjs:
+    - sprite: {fileID: 21300000, guid: e9e869ed513d0f143b5b0943bb367851, type: 3}
+      proportion: 0
+  - color: {r: 0.2, g: 1, b: 0, a: 1}
+    colorObjs:
+    - sprite: {fileID: 21300000, guid: 9e3603459b63163428de949fa2eacf2c, type: 3}
+      proportion: 2
+    - sprite: {fileID: 21300000, guid: 75b1072d459e52e43a70ffd562437a9a, type: 3}
+      proportion: 1
+    - sprite: {fileID: 21300000, guid: 04d1e8a80cd94f54fb142ef31a54a00f, type: 3}
+      proportion: 1
+    - sprite: {fileID: 21300000, guid: e07ad08ec6641514589aa0135dc14810, type: 3}
+      proportion: 1
+  - color: {r: 0.38431373, g: 0.41960785, b: 0.78431374, a: 1}
+    colorObjs:
+    - sprite: {fileID: 21300000, guid: af96f235e1d4150468d74a2539c3e397, type: 3}
+      proportion: 0
+  - color: {r: 0.78431374, g: 0.38431373, b: 0.6117647, a: 1}
+    colorObjs:
+    - sprite: {fileID: 21300000, guid: a64881923dcf50b408e8a9a27673d0f6, type: 3}
+      proportion: 2
+    - sprite: {fileID: 21300000, guid: f283961b0ef90cc4390a0d7eb4b83027, type: 3}
+      proportion: 1
+    - sprite: {fileID: 21300000, guid: 24706fbd4d4079e449bc23b3850782fc, type: 3}
+      proportion: 1
+  - color: {r: 0.78431374, g: 0.6901961, b: 0.38431373, a: 1}
+    colorObjs:
+    - sprite: {fileID: 21300000, guid: c2a585cf40f6a0349b1417f55a6b309f, type: 3}
+      proportion: 0
+  colorArray_3D:
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    colorObjs:
+    - model: {fileID: 919132149155446097, guid: da3bf5c0491328642b0a3f9e8d578e29, type: 3}
+      proportion: 0
+  - color: {r: 1, g: 1, b: 1, a: 1}
+    colorObjs:
+    - model: {fileID: 919132149155446097, guid: 00942b5dae7295b47bf84a564d9d2260, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: 94ef4724ae49a8b4593092898fc6a9e4, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: 0123c7f1160ddd341a9cafeb3e2471fd, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: b2eb0c53f7d48cf4689b7cac945ae46d, type: 3}
+      proportion: 1
+  - color: {r: 0.2, g: 1, b: 0, a: 1}
+    colorObjs:
+    - model: {fileID: 919132149155446097, guid: 2372773492065a741b74bd4e6cbe7b95, type: 3}
+      proportion: 0
+  - color: {r: 0.38431373, g: 0.41960785, b: 0.78431374, a: 1}
+    colorObjs:
+    - model: {fileID: 919132149155446097, guid: d0de3d3642de5264ab6fe013a3c34803, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: 1d8afe43568e8564aa36c33e9fbb119f, type: 3}
+      proportion: 1
+  - color: {r: 0.78431374, g: 0.38431373, b: 0.6117647, a: 1}
+    colorObjs:
+    - model: {fileID: 919132149155446097, guid: 3573c9dad5ce3f442b853410fa3d4620, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: af9ec4bb04cc1f2438674f3b724e4328, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: 28b01f7855c4ebd49afdfcc797493f4e, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: aade901585ebe1b4ca09512f10a6727e, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: eca10500ea7ecce4180375a9da7aca56, type: 3}
+      proportion: 1
+    - model: {fileID: 919132149155446097, guid: bd69159054863a94280bb35430342347, type: 3}
+      proportion: 1
+  - color: {r: 0.78431374, g: 0.6901961, b: 0.38431373, a: 1}
+    colorObjs:
+    - model: {fileID: 919132149155446097, guid: 2ca7c48456cf6da40b887dbed6d3bf98, type: 3}
+      proportion: 0
