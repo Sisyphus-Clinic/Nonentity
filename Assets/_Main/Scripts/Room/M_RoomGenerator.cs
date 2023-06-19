@@ -8,7 +8,7 @@ public class M_RoomGenerator : MonoBehaviour
     public SO_ModelData md_Floor;
     public Transform environment;
 
-    public Vector2 roomSize;
+    public Vector2 mapSize;
 
     void Start()
     {
@@ -26,9 +26,9 @@ public class M_RoomGenerator : MonoBehaviour
         float roomWidth = md_Floor.modelInfos[0].mesh.bounds.size.x;
         float roomLength = md_Floor.modelInfos[0].mesh.bounds.size.z;
 
-        for (int i = 1; i < roomSize.x; i++)
+        for (int i = 1; i < mapSize.x; i++)
         {
-            for (int j = 1; j < roomSize.y; j++)
+            for (int j = 1; j < mapSize.y; j++)
             {
                 GameObject newFloor = new GameObject("Floor" + " " + i + " " + j);
                 newFloor.AddComponent<MeshFilter>().mesh = md_Floor.modelInfos[0].mesh;
@@ -37,9 +37,9 @@ public class M_RoomGenerator : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < roomSize.x; i++)
+        for (int i = 0; i < mapSize.x; i++)
         {
-            for (int j = 1; j < roomSize.y; j++)
+            for (int j = 1; j < mapSize.y; j++)
             {
                 GameObject newWall = new GameObject("Wall" + " " + i + " " + j);
                 newWall.AddComponent<MeshFilter>().mesh = md_Wall.modelInfos[0].mesh;

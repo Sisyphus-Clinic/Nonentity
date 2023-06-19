@@ -59,7 +59,7 @@ MonoBehaviour:
   colorArray_3D:
   - color: {r: 0, g: 0, b: 0, a: 1}
     colorObjs:
-    - model: {fileID: 919132149155446097, guid: da3bf5c0491328642b0a3f9e8d578e29, type: 3}
+    - model: {fileID: 919132149155446097, guid: 38d4c0f9e81fa53479ff047baf1520fe, type: 3}
       proportion: 0
   - color: {r: 1, g: 1, b: 1, a: 1}
     colorObjs:
@@ -67,9 +67,7 @@ MonoBehaviour:
       proportion: 1
     - model: {fileID: 919132149155446097, guid: 94ef4724ae49a8b4593092898fc6a9e4, type: 3}
       proportion: 1
-    - model: {fileID: 919132149155446097, guid: 0123c7f1160ddd341a9cafeb3e2471fd, type: 3}
-      proportion: 1
-    - model: {fileID: 919132149155446097, guid: b2eb0c53f7d48cf4689b7cac945ae46d, type: 3}
+    - model: {fileID: 919132149155446097, guid: cfea5a4f6eafef94780623ddd43b1e25, type: 3}
       proportion: 1
   - color: {r: 0.2, g: 1, b: 0, a: 1}
     colorObjs:
