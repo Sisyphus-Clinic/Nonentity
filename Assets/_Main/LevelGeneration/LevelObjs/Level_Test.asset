@@ -59,41 +59,31 @@ MonoBehaviour:
   colorArray_3D:
   - color: {r: 0, g: 0, b: 0, a: 1}
     colorObjs:
-    - model: {fileID: 919132149155446097, guid: 38d4c0f9e81fa53479ff047baf1520fe, type: 3}
+    - model: {fileID: 919132149155446097, guid: ba748f8a73af6254e93458a7a2314efa, type: 3}
       proportion: 0
   - color: {r: 1, g: 1, b: 1, a: 1}
     colorObjs:
-    - model: {fileID: 919132149155446097, guid: 00942b5dae7295b47bf84a564d9d2260, type: 3}
+    - model: {fileID: 919132149155446097, guid: ba748f8a73af6254e93458a7a2314efa, type: 3}
       proportion: 1
-    - model: {fileID: 919132149155446097, guid: 94ef4724ae49a8b4593092898fc6a9e4, type: 3}
+    - model: {fileID: 919132149155446097, guid: ba748f8a73af6254e93458a7a2314efa, type: 3}
       proportion: 1
-    - model: {fileID: 919132149155446097, guid: cfea5a4f6eafef94780623ddd43b1e25, type: 3}
+    - model: {fileID: 919132149155446097, guid: ba748f8a73af6254e93458a7a2314efa, type: 3}
       proportion: 1
   - color: {r: 0.2, g: 1, b: 0, a: 1}
     colorObjs:
-    - model: {fileID: 919132149155446097, guid: 2372773492065a741b74bd4e6cbe7b95, type: 3}
+    - model: {fileID: 919132149155446097, guid: ba748f8a73af6254e93458a7a2314efa, type: 3}
       proportion: 0
   - color: {r: 0.38431373, g: 0.41960785, b: 0.78431374, a: 1}
     colorObjs:
-    - model: {fileID: 919132149155446097, guid: d0de3d3642de5264ab6fe013a3c34803, type: 3}
+    - model: {fileID: 919132149155446097, guid: 173b2a2bb9b662f42b672a10d8c0f31d, type: 3}
       proportion: 1
-    - model: {fileID: 919132149155446097, guid: 1d8afe43568e8564aa36c33e9fbb119f, type: 3}
+    - model: {fileID: 919132149155446097, guid: e7c915f1c014b2e49aa1a1ff0105573c, type: 3}
       proportion: 1
   - color: {r: 0.78431374, g: 0.38431373, b: 0.6117647, a: 1}
     colorObjs:
-    - model: {fileID: 919132149155446097, guid: 3573c9dad5ce3f442b853410fa3d4620, type: 3}
-      proportion: 1
-    - model: {fileID: 919132149155446097, guid: af9ec4bb04cc1f2438674f3b724e4328, type: 3}
-      proportion: 1
-    - model: {fileID: 919132149155446097, guid: 28b01f7855c4ebd49afdfcc797493f4e, type: 3}
-      proportion: 1
-    - model: {fileID: 919132149155446097, guid: aade901585ebe1b4ca09512f10a6727e, type: 3}
-      proportion: 1
-    - model: {fileID: 919132149155446097, guid: eca10500ea7ecce4180375a9da7aca56, type: 3}
-      proportion: 1
-    - model: {fileID: 919132149155446097, guid: bd69159054863a94280bb35430342347, type: 3}
+    - model: {fileID: 919132149155446097, guid: 173b2a2bb9b662f42b672a10d8c0f31d, type: 3}
       proportion: 1
   - color: {r: 0.78431374, g: 0.6901961, b: 0.38431373, a: 1}
     colorObjs:
-    - model: {fileID: 919132149155446097, guid: 2ca7c48456cf6da40b887dbed6d3bf98, type: 3}
+    - model: {fileID: 919132149155446097, guid: 173b2a2bb9b662f42b672a10d8c0f31d, type: 3}
       proportion: 0

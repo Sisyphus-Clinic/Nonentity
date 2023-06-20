@@ -104,7 +104,7 @@ public class TextureReader : MonoBehaviour
                 if (colorObj.color.Equals(pixelColor))
                 {
                     Vector3 pos = new Vector3(x, y, z);
-                    GameObject go = Instantiate(GetTileModel(colorObj.colorObjs), pos, Quaternion.Euler(-90, 0, 0));
+                    GameObject go = Instantiate(GetTileModel(colorObj.colorObjs), pos, Quaternion.Euler(0, 0, 0));
                      //new GameObject($"Tile{x}{z}");
                     return go.transform;
                 }
